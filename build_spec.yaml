@@ -30,7 +30,7 @@ steps:
     name: "Define unique version for Helm"
     timeoutInSeconds: 40
     command: |
-      export HELM_VERSION=`echo 0.1.0-${BUILDRUN_HASH}`
+      export HELM_VERSION=`echo ${BUILDRUN_HASH}`
       echo "HELM_VERSION: " $HELM_VERSION
       
   - type: Command
